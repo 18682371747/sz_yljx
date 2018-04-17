@@ -94,6 +94,135 @@ b {
 .navbar-header .btn {
     min-width: 100px;
 }
+
+.animenu__toggle {
+    display: none;
+    cursor: pointer;
+    background-color: #111;
+    border: 0;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.animenu__toggle:hover {
+    background-color: #0186ba;
+}
+
+.animenu__toggle__bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: 0.15s cubic-bezier(0.75, -0.55, 0.25, 1.55);
+    -o-transition: 0.15s cubic-bezier(0.75, -0.55, 0.25, 1.55);
+    transition: 0.15s cubic-bezier(0.75, -0.55, 0.25, 1.55);
+}
+
+.animenu__toggle__bar+.animenu__toggle__bar {
+    margin-top: 4px;
+}
+
+.animenu__toggle--active .animenu__toggle__bar {
+    margin: 0;
+    position: absolute;
+}
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.animenu {
+    display: block;
+}
+
+.animenu ul {
+    padding: 0;
+    list-style: none;
+    font: 0px 'Open Sans', Arial, Helvetica;
+}
+
+.animenu a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.animenu__nav>li {
+    position: relative;
+}
+
+.animenu__nav>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+.animenu__nav__child {
+    min-width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    margin: 20px 0 0 0;
+    background-color: #f1f1f1;
+    transition: margin .15s, opacity .15s;
+}
+
+.animenu__nav__child>li {
+    width: 100%;
+    height: 30px!important;
+    line-height: 30px!important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.animenu__nav__child>li:last-child {
+    border: 0;
+}
+
+.animenu__nav__child a {
+    padding: 0 10px;
+    width: 100%;
+    border-color: #373737;
+    color: #333!important;
+    font-size: 14px!important;
+    font-weight: initial!important;
+}
+
+.animenu__nav__child a:hover {
+    border-bottom: 2px solid #669900;
+    color: #669900!important;
+}
+
+.animenu__nav--open {
+    display: block !important;
+}
+
+.animenu__nav--open .animenu__nav__child {
+    display: block;
+}
+
+
+
+
+
+
 .row.page-container > div {
     padding-bottom: 0px;
 }
