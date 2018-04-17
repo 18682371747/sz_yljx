@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="深圳晟天澜科技">
+    <meta name="description" content="深圳晟天澜科技">
+    <title>home</title>
+    <link rel="icon" type="image/png" href="favicon1.ico">
+    <link href="./resource/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/base.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./resource/js/lay/css/layui.css">
+    <link href="./resource/css/main.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/style.css" rel="stylesheet" media="screen">
+
+    <script type="text/javascript" src="./resource/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="./resource/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./resource/js/lay/layui.js"></script>
+    <script type="text/javascript" src="./resource/js/vue.min.js"></script>
+
+
+    <style>
+        .footer-list {
+            overflow: hidden;
+        }
+
+        .footer-list li {
+            float: left;
+            width: 50%;
+            /*margin-right: 10px;*/
+        }
+
+        .about li {
+            width: 50%;
+        }
+
+        span.ismfcolor-mianfei {
+            float: right;
+            color: #fff;
+            font-weight: 500;
+            background: rgb(20, 199, 121);
+            border-radius: 5px;
+            padding: 0px 10px;
+        }
+
+        span.ismfcolor-huiyuan {
+            float: right;
+            color: #fff;
+            font-weight: 500;
+            background: #f0ad4e;
+            border-radius: 5px;
+            padding: 0px 10px;
+        }
+
+        .cc-mask {
+            background: rgba(0, 0, 0, .4);
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all .3s ease 0s;
+            width: 100%;
+            transition: .3s;
+            -webkit-transition: .3s;
+        }
+
+        .cc-mask .c-btn-1 {
+            left: 50%;
+            margin-left: -72px;
+            margin-top: -16px;
+            position: absolute;
+            top: 100%;
+            transition: .3s;
+            -webkit-transition: .3s
+        }
+
+        .pack:hover .cc-mask {
+            opacity: 1;
+            filter: alpha( opacity=100)
+        }
+
+        .pack:hover img {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1)
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: .8s;
+            -webkit-transition: .8s
+        }
+
+        .pack:hover .cc-mask .c-btn-1 {
+            top: 50%
+        }
+
+        .c-btn-1 {
+            border-color: #fff;
+            color: #fff;
+            width: 120px;
+            font-size: 18px;
+        }
+
+        .comm-btn {
+            padding: 0 8px;
+            border: 1px solid;
+            border-radius: 16px;
+            display: inline-block;
+            text-align: center;
+            height: 32px;
+            line-height: 32px;
+        }
+
+        .main_kuan_01,
+        .main_Set {
+            overflow: hidden;
+            height: auto;
+            width: 100%;
+        }
+
+        .main_Set .boxgrid {
+            height: 200px;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            padding: 5px;
+        }
+
+        .main_Set .boxgrid img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_Set .boxgrid p {
+            display: block;
+            padding: 0 20px;
+            color: #fff;
+            overflow: hidden;
+            line-height: 24px;
+            font-size: 14px;
+            text-indent: 30px
+        }
+
+        .main_Set .boxgrid p a {
+            display: block;
+            color: #FFF;
+            font-size: 14px;
+            text-indent: 30px
+        }
+
+        .main_Set .boxgrid p a:hover {
+            display: block;
+            text-decoration: none
+        }
+
+        .main_Set .boxcaptionY,
+        .boxcaptionB,
+        .boxcaptionR,
+        .boxcaptionG,
+        .boxcaptionP {
+            float: left;
+            position: absolute;
+            height: 200px;
+            width: 100%
+        }
+
+        .main_Set .captionfull .boxcaptionY,
+        .boxcaptionB,
+        .boxcaptionR,
+        .boxcaptionG,
+        .boxcaptionP {
+            top: 260px;
+            left: 0
+        }
+
+        .main_Set .boxgrid h3 {
+            margin: 20px 20px 10px;
+            font-size: 24px;
+            color: #FFF
+        }
+
+        .main_Set .boxcaptionY {
+            background: rgba(28, 151, 198, 0.9);
+            background: #1c97c6
+        }
+
+        .main_Set .boxcaptionB {
+            background: rgba(245, 139, 61, 0.9);
+            background: #f58b3d
+        }
+
+        .main_Set .boxcaptionR {
+            background: rgba(155, 216, 63, 0.9);
+            background: #9bd83f
+        }
+
+        .main_Set .boxcaptionG {
+            background: rgba(242, 107, 88, 0.9);
+            background: #f26b58
+        }
+
+        .main_Set .boxcaptionP {
+            background: rgba(148, 146, 147, 0.9);
+            background: #949293
+        }
+
+        .Menubox {
+            width: 100%;
+            height: 80px;
+            line-height: 40px;
+            text-align: center;
+            background: url(./resource/images/i_title_pic02.jpg) repeat-x top;
+            background-size: 100% 100%;
+            color: #333
+        }
+
+        .Menubox h2 {
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            letter-spacing: normal;
+        }
+
+        .Menubox ul li {
+            width: auto;
+            float: left;
+            cursor: pointer;
+            height: 40px;
+            padding: 0 20px;
+        }
+
+        .Menubox a:link {
+            background-image: none
+        }
+
+        .Menubox a:visited {
+            background-image: none
+        }
+
+        .Menubox a:active {
+            background-image: none
+        }
+
+        .Menubox .hover {
+            border-radius: 5px;
+            background: green;
+            color: #fff
+        }
+
+        .Menubox .hover h2 {
+            color: #FFF
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="app">
+        <header id="header" class="navbar brand-color navbar-inverse fixed-header-layout" role="navigation">
+            <div class="container">
+                <div class="col-xs-12 col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                    <div class="navbar-header">
+                        <div class="col-md-2" style="width:12.5%;padding-left: 0px;">
+                            <a class="" href="">
+                                <img class="logo logo-visible v-middle" width="120" src="./resource/images/logo.png" alt="编程logo" title="编程logo">
+                            </a>
+                        </div>
+                        <!-- 头部菜单start -->
+                        <div class="col-md-7" id="h_n_min" style="width:67.5%;">
+                            <nav class="collapse navbar-collapse f-right" style="float:left;">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a class="color-w link1" href="index.html">home</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="products.html">products</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="treatment.html">treatment</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="bestselling.html">best selling</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="company.html ">company</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="contact.html">contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- 头部菜单end -->
+                    
+
+                        <button courseTypeName="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="top: -52px;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="float_im" style="height:180px;">
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=412226853&amp;site=qq&amp;menu=yes">
+                    <div class="qq">
+                        <img src="./resource/images/qq.png" title="qq在线客服" alt="qq在线客服">
+                        <p>在线客服</p>
+                    </div>
+                </a>
+                <div class="code">
+                    <img src="./resource/images/code.jpg" title="设计空间公众号二维码" alt="设计空间微信公众号二维码">
+                    <img class="b" src="./resource/images/code.jpg" title="设计空间微信公众号二维码大图" alt="设计空间微信公众号二维码大图">
+                </div>
+        </div>
+        <!--内容start-->
+        <div class="mp-container">
+
+            <section class="header-container">
+                <div class="layui-carousel" id="banner">
+                    <div carousel-item="">
+                        <div :class="index==(gg_items.length-1) ? 'layui-this' : ''" v-for="(item,index) in gg_items">
+                            <img :src="item.imgBanner" width="100%" height="100%">
+                        </div>
+
+                    </div>
+                    <div class="layui-carousel-ind">
+                        <ul>
+                            <li :class="index==(gg_items.length-1) ? 'layui-this' : ''" v-for="(item,index) in gg_items"></li>
+                        </ul>
+                    </div>
+                    <button class="layui-icon layui-carousel-arrow" lay-type="sub"></button>
+                    <button class="layui-icon layui-carousel-arrow" lay-type="add"></button>
+                </div>
+            </section>
+
+            <section class="p-layout">
+                <div class="container">
+                    <div class="col-lg-12">
+                        <h1 class="page-title" style="padding: 10px 0;font-size: 22px;letter-spacing:0.5px;font-weight: 600;"></h1>
+                    </div>
+                </div>
+                <!--课程分类start-->
+                <div class="container">
+                    <div class="clearfix">
+
+                        <div class="Menubox">
+                            <ul>
+                                <li id="one1" @click="getData('ALL')" :class="selectMenu == 'ALL' ? 'hover' : ''">
+                                    <h2>ALL</h2>
+                                </li>
+                                <li id="one2" v-for="item in couserTypeItems" @click="getData(item.id)" :class="selectMenu == item.id ? 'hover' : ''">
+                                    <h2 v-text="item.comnValue"></h2>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--课程分类end-->
+                <div class="container">
+                    <div class="col-lg-12">
+                        <h1 class="page-title" style="padding: 10px 0;font-size: 22px;letter-spacing:0.5px;font-weight: 600;"></h1>
+                    </div>
+                </div>
+                <div class="container price-table-container row row-nt" style="padding-bottom: 50px;">
+                    <div class="col-xs-12 col-md-4 col-lg-3 col-adm" v-for="item in items">
+                        <div class="i-wrap align-center pack clearfix" style="background: #fff;">
+                            <img src="./resource/images/list.jpg" class="img-responsive" style="width:100%;height: 200px;" :alt="item.courseName" :title="item.courseName">
+                            <div style="position: relative;top:-6px;">
+                                <div class="pt-features" style="padding-top: 15px;padding-bottom: 11px;">
+                                    <ul>
+                                        <li>
+                                            <strong v-text="item.remark"></strong>
+                                        </li>
+                                        <li>
+                                            <strong v-text="item.courseName"></strong>
+                                        </li>
+                                        <li class="a">
+                                            <span v-text="item.money"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cc-mask">
+                                <a :href="'product_v.html?id='+item.id" target="_blank" title="" class="comm-btn c-btn-1">点击查看</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+        </div>
+        <!--内容end-->
+
+        <!--底部版权start-->
+        <footer id="footer" class="footer b-top">
+            <div class="copyright">
+                <span class="color-light">Copyright © 2018&nbsp;
+                    <a href="">长沙融聚文化有限公司</a>&nbsp;版权所有 湘ICP备XXX号.</span>
+            </div>
+        </footer>
+        <!--底部版权end-->
+    </div>
+
+    <script>
+
+        $(function () {
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    restUrl: 'http://www.alaoji.com:8080/lgFace',
+                    selectMenu: 'ALL',
+                    items: [{ courseName: 'Model: YH-5505', visNum: '100', id: 1, money: 'USD 1,785.56', remark: 'new vacuum roller unoisetion 3d smart rf photon cavitation 2.0 slimming machine' },
+                    { courseName: 'Model: YH-3301', visNum: '200', id: 2, money: 'USD USD 1,000.70', remark: 'quadrupole sextupole eight-polar 3d smart rf+vacuum press negative+red photon' },
+                    { courseName: 'Model: YH-6601', visNum: '300', id: 3, money: 'USD 891.23', remark: 'unoisetion+sexutpolar rf vacuum+bipolar +quadrupole +dermabrasion+spray+photon' },
+                    { courseName: 'Model: YH-5401', visNum: '400', id: 4, money: 'USD 659.86', remark: 'unoisetion+3d smart rf sexutpolar bipolar w/ vacuum+bipolar +quadrupole photon' },
+                    { courseName: 'Model: YH-4404', visNum: '500', id: 5, money: 'USD 853.50', remark: 'unoisetion cavitation 2.0 3d smart rf vacuum slimming machine' },
+                    { courseName: 'Model: YH-4203', visNum: '600', id: 6, money: 'USD 784.99', remark: 'unoisetion cavitation sextupole quadrupolar bipolar rf body slimming slim beauty' },
+                    { courseName: 'Model: WL-BK4S', visNum: '700', id: 7, money: 'USD 9,027.08', remark: 'unoisetion cavitation sextupole quadrupolar bipolar rf vacuum beauty' },
+                    { courseName: 'Model: WL-UU7001', visNum: '800', id: 8, money: 'USD 660.02', remark: '7in1 cavitation ultrasonic radio frequency rfbipolar tripolar multipolar photon' },
+                    { courseName: 'Model: YH-5505', visNum: '100', id: 1, money: 'USD 1,785.56', remark: 'new vacuum roller unoisetion 3d smart rf photon cavitation 2.0 slimming machine' },
+                    { courseName: 'Model: YH-3301', visNum: '200', id: 2, money: 'USD USD 1,000.70', remark: 'quadrupole sextupole eight-polar 3d smart rf+vacuum press negative+red photon' },
+                    { courseName: 'Model: YH-6601', visNum: '300', id: 3, money: 'USD 891.23', remark: 'unoisetion+sexutpolar rf vacuum+bipolar +quadrupole +dermabrasion+spray+photon' },
+                    { courseName: 'Model: YH-5401', visNum: '400', id: 4, money: 'USD 659.86', remark: 'unoisetion+3d smart rf sexutpolar bipolar w/ vacuum+bipolar +quadrupole photon' },
+                    { courseName: 'Model: YH-4404', visNum: '500', id: 5, money: 'USD 853.50', remark: 'unoisetion cavitation 2.0 3d smart rf vacuum slimming machine' },
+                    { courseName: 'Model: YH-4203', visNum: '600', id: 6, money: 'USD 784.99', remark: 'unoisetion cavitation sextupole quadrupolar bipolar rf body slimming slim beauty' },
+                    { courseName: 'Model: WL-BK4S', visNum: '700', id: 7, money: 'USD 9,027.08', remark: 'unoisetion cavitation sextupole quadrupolar bipolar rf vacuum beauty' },
+                    { courseName: 'Model: WL-UU7001', visNum: '800', id: 8, money: 'USD 660.02', remark: '7in1 cavitation ultrasonic radio frequency rfbipolar tripolar multipolar photon' }],
+                    couserTypeItems: [
+                        { id: '1', comnValue: 'cavitation machines' },
+                        { id: '2', comnValue: 'Diamond Dermabrasion Microdermabrasion machines' },
+                        { id: '3', comnValue: 'Hydro-Microdermabrasion machines' },
+                        { id: '4', comnValue: 'tattoo removal machines' },
+                        { id: '5', comnValue: 'hair removal machines' },
+                        { id: '6', comnValue: 'lipo laser machines' },
+                        { id: '7', comnValue: 'Crystal Fractional RF  machines' },
+                        { id: '8', comnValue: 'body slimming blanket' },
+                        { id: '9', comnValue: 'led light beauty machines' },
+                        { id: '10', comnValue: 'home use small beauty machines' }],
+                    gg_items: [{ imgBanner: './resource/images/banner1.jpg' }, { imgBanner: './resource/images/banner2.jpg' }, { imgBanner: './resource/images/banner3.jpg' }, { imgBanner: './resource/images/banner4.jpg' }, { imgBanner: './resource/images/banner5.jpg' }, { imgBanner: './resource/images/banner6.jpg' }],
+                },
+                methods: {
+                    getCourseType: function () {
+                        var me = this;
+                        $.ajax({
+                            type: "get",
+                            url: me.restUrl + "/comn/getCouserType",//获取列表数据
+                            dataType: "jsonp",
+                            async: false,
+                            data: {},
+                            success: function (data) {
+                                me.couserTypeItems = data.comns;
+                            }
+                        });
+                    },
+                    tupianlunbo: function () {
+                        layui.use(['carousel'], function () {
+                            var carousel = layui.carousel;
+                            carousel.render({
+                                elem: '#banner'
+                                , arrow: 'always'
+                                , width: '100%'
+                                , height: '450px'
+                                , interval: 2500
+                            });
+                        });
+
+                    },
+                    getData: function (courseTypeName) {
+                        var me = this;
+                        me.selectMenu = courseTypeName;
+
+                        var param = {
+                            pageIndex: '1',
+                            pageSize: 8
+                        }
+                        if (courseTypeName && courseTypeName != 'ALL') {
+                            param.courseType = courseTypeName;
+                        }
+
+                        // $.ajax({
+                        //     type: "get",
+                        //     url: me.restUrl + "/couser/getCouserMessage",//获取列表数据
+                        //     dataType: "jsonp",
+                        //     async: false,
+                        //     data: param,
+                        //     success: function (data) {
+                        //         me.items = data.couserInfo;
+                        //     }
+                        // });
+
+                    },
+                    openWin: function (url, text, winInfo) {
+                        var winObj = window.open(url, text, winInfo);
+                        var loop = setInterval(function () {
+                            if (winObj.closed) {
+                                clearInterval(loop);
+                                //alert('closed');      
+                                parent.location.reload();
+                            }
+                        }, 1);
+                    },
+                    quit: function () {
+                        localStorage.clear();
+                        location.reload();
+                    },
+                    menuHover: function () {
+                        $('.boxgrid.captionfull').hover(function () {
+                            $(".cover", this).stop().animate({ top: '0px' }, { queue: false, duration: 160 });
+                        }, function () {
+                            $(".cover", this).stop().animate({ top: '260px' }, { queue: false, duration: 160 });
+                        });
+                    },
+                    initQQ:function(){
+                        var code = document.getElementsByClassName('code');
+                        if (code && code.length > 0) {
+                            for (var a = 0; a < code.length; a++) {
+                                code[a].onmouseover = function () {
+                                    var b = this.getElementsByClassName('b');
+                                    b[0].style.display = "block ";
+                                }
+                                code[a].onmouseout = function () {
+                                    var b = this.getElementsByClassName('b');
+                                    b[0].style.display = "none ";
+                                }
+                            }
+                        }
+                    }
+                },
+                mounted: function () {
+                    this.tupianlunbo();
+                    // this.getCourseType();
+                    this.menuHover();
+                    this.getData('ALL');
+                    this.initQQ();
+
+
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

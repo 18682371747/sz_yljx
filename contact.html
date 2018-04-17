@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="./resource/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/base.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="favicon1.ico">
+    <script type="text/javascript" src="./resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./resource/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./resource/js/vue.min.js"></script>
+    <title>contact</title>
+    <style>
+        .allline:before,
+        .allline:after,
+        .container:before,
+        .container:after,
+        .industorycate:before,
+        .industorycate:after,
+        .disblock:before,
+        .disblock:after,
+        .servicecate:before,
+        .servicecate:after {
+            display: table;
+            content: " ";
+        }
+
+        .allline:after,
+        .container:after,
+        .industorycate:after,
+        .disblock:after,
+        .servicecate:after {
+            clear: both;
+        }
+
+        img {
+            border: none;
+        }
+
+        .allline {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1010px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: block;
+        }
+
+        header .container {
+            max-width: 1240px;
+        }
+
+        .col-12 {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .col-6 {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .contact {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            display: block;
+        }
+
+        .contact .ctitle {
+            font-size: 1.4em;
+            color: #E50251;
+            float: left;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .contact .contactleft {
+            border-right: 1px solid #dddddd;
+        }
+
+        .contact .contactright {
+            padding-left: 60px;
+        }
+
+        .contact .contactright img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .contact .cmap {
+            color: #ffffff;
+            background-color: #E50251;
+            height: 500px;
+        }
+
+        .contact .cmap .cmaptitle {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-left: 50px;
+            font-size: 2em;
+        }
+
+        .contact .cmap .cmapaddr li {
+            padding-left: 50px;
+            color: #cfcfcf;
+            display: block;
+            font-size: 1.2em;
+            line-height: 2.2em;
+            background-color: #E50251;
+            cursor: pointer;
+        }
+
+        .contact .cmap .cmapaddr .mapactive {
+            border: 18px solid;
+            border-color: #E50251 #E50251 #E50251 #F4F3EF;
+            position: absolute;
+            margin-left: -50px;
+        }
+
+        @media (min-width: 1240px) {
+            .container {
+                width: 1240px;
+            }
+
+            .flexslider {
+                min-height: 300px;
+            }
+        }
+
+        .allline .container img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+
+        <header id="header" class="navbar brand-color navbar-inverse fixed-header-layout" role="navigation">
+            <div class="container">
+                <div class="col-xs-12 col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                    <div class="navbar-header">
+                        <div class="col-md-2" style="width:12.5%;padding-left: 0px;">
+                            <a class="" href="">
+                                <img class="logo logo-visible v-middle" width="120" src="./resource/images/logo.png" alt="编程logo" title="编程logo">
+                            </a>
+                        </div>
+                        <!-- 头部菜单start -->
+                        <div class="col-md-7" id="h_n_min" style="width:67.5%;">
+                            <nav class="collapse navbar-collapse f-right" style="float:left;">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a class="color-w link1" href="index.html">home</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="products.html">products</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="treatment.html">treatment</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="bestselling.html">best selling</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="company.html ">company</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="contact.html">contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- 头部菜单end -->
+
+
+                        <button courseTypeName="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="top: -52px;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="float_im" style="height:180px;">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=412226853&amp;site=qq&amp;menu=yes">
+                <div class="qq">
+                    <img src="./resource/images/qq.png" title="qq在线客服" alt="qq在线客服">
+                    <p>在线客服</p>
+                </div>
+            </a>
+            <div class="code">
+                <img src="./resource/images/code.jpg" title="设计空间公众号二维码" alt="设计空间微信公众号二维码">
+                <img class="b" src="./resource/images/code.jpg" title="设计空间微信公众号二维码大图" alt="设计空间微信公众号二维码大图">
+            </div>
+        </div>
+        <section>
+            <div class="allline" style="background-color: rgb(240, 240, 240); margin-top: 0px;">
+                <div class="container">
+                    <img src="./resource/images/aboutbg.jpg">
+                </div>
+                <div class="container">
+                    <div class="contact">
+                        <div class="col-12">
+                            <div class="ctitle">
+                                CONTACT US
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-s-12 col-6">
+                            <div class="contactleft">
+
+                                <p>
+                                    <span style="font-size:1.1em;line-height:1.5em;">
+                                        <span style="color:#666666;">
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+
+                                <p style="font-size:1.1em;line-height:1.5em;">
+                                    <span style="color:#666666;overflow: hidden; display: inline-block;"> SHENZHEN SHENGTIANLAN TECHNOLOGY CO.,LTD</span>
+                                </p>
+
+                                <p style="font-size:1.1em;line-height:1.5em;">
+                                    <span style="color:#666666;overflow: hidden; display: inline-block;"> email: sales01@shengtianlan.com</span>
+                                </p>
+                                <p style="font-size:1.1em;line-height:1.5em;">
+                                    <span style="color:#666666;overflow: hidden; display: inline-block;"> phone number :+8615989859901</span>
+                                </p>
+                                <p style="font-size:1.1em;line-height:1.5em;">
+                                    <span style="color:#666666;overflow: hidden; display: inline-block;"> whatsapp:+8615989859901</span>
+                                </p>
+                                <span style="color:#666666;"> </span>
+                                <p>
+                                    <span style="font-size:1.1em;line-height:1.5em;">
+                                        <span style="color:#666666;overflow: hidden; display: inline-block;">
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span style="font-size:1.1em;line-height:1.5em;">
+                                        <span style="color:#666666;overflow: hidden; display: inline-block;">
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span style="font-size:1.1em;line-height:1.5em;">
+                                        <span style="color:#666666;">
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span style="font-size:1.1em;line-height:1.5em;">
+                                        <span style="color:#666666;">
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span style="font-size:1.1em;line-height:1.5em;">
+                                        <span style="color:#666666;">
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-s-12 col-6">
+                            <div class="contactright">
+                                <img src="./resource/images/170116172343804.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="clear36"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear16"></div>
+            </div>
+        </section>
+        <footer id="footer" class="footer b-top">
+            <div class="copyright">
+                <span class="color-light">Copyright © 2018&nbsp;
+                    <a href="">长沙融聚文化有限公司</a>&nbsp;版权所有 湘ICP备XXX号.</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+
+        (function () {
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    restUrl: 'http://www.alaoji.com:8080/lgFace',
+                    userName: '',
+                },
+                methods: {
+                    quit: function () {
+                        localStorage.clear();
+                        location.reload();
+                    },
+                    initQQ: function () {
+                        var code = document.getElementsByClassName('code');
+                        if (code && code.length > 0) {
+                            for (var a = 0; a < code.length; a++) {
+                                code[a].onmouseover = function () {
+                                    var b = this.getElementsByClassName('b');
+                                    b[0].style.display = "block ";
+                                }
+                                code[a].onmouseout = function () {
+                                    var b = this.getElementsByClassName('b');
+                                    b[0].style.display = "none ";
+                                }
+                            }
+                        }
+                    }
+                },
+                mounted: function () {
+                    this.initQQ();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

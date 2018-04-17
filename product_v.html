@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="深圳晟天澜科技">
+    <meta name="description" content="深圳晟天澜科技">
+    <link rel="icon" type="image/png" href="favicon1.ico">
+    <link href="./resource/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/base.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/main.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/style.css" rel="stylesheet" media="screen">
+
+    <script type="text/javascript" src="./resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./resource/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./resource/js/vue.min.js"></script>
+
+    <title>product detail</title>
+    <style>
+        .footer-list {
+            overflow: hidden;
+        }
+
+        .footer-list li {
+            float: left;
+            width: 50%;
+            /*margin-right: 10px;*/
+        }
+
+        .userfeel_list {
+            height: auto;
+            overflow: hidden;
+            background: #fff;
+            margin: 0 2px 20px 0;
+            padding: 20px;
+            border: 1px solid #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .userfeel_list_con {
+            height: auto;
+            overflow: hidden;
+        }
+
+        .userfeel_list_con_left {
+            width: 100%;
+            float: left;
+            height: auto;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .navigation {
+            border-bottom: 2px solid #CFCECE;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+        }
+
+        .content {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .mb {
+            margin-bottom: 30px;
+        }
+
+        .shop-details-left {
+            width: 620px;
+            float: left;
+            height: 500px;
+            background: #F1F1F1;
+        }
+
+        .shop-details-right {
+            width: 545px;
+            float: right;
+        }
+
+        .shop-details-right .shop-details-title h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .thirdShop {
+            line-height: 26px;
+        }
+
+        .thirdShop span {
+            color: #666;
+        }
+
+        .address-selected .identification-shop .tabs,
+        .address-selected .latest-transfer .tabs,
+        .supporting .tabs {
+            border-bottom: 1px #669900 solid;
+        }
+
+        .shop-selected .tabs a.selected-first,
+        .address-selected .tabs a.selected-first,
+        .supporting .tabs a.selected-first {
+            display: inline-block;
+            background-color: #669900;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0;
+            z-index: 10;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: -1px;
+        }
+
+        .address-selected .identification-shop .tabs a.selected-first,
+        .address-selected .latest-transfer .tabs a.selected-first,
+        .supporting .tabs a.selected-first {
+            background: -webkit-linear-gradient(top, #669900, #669900);
+            background: -o-linear-gradient(bottom, #669900, #669900);
+            background: -moz-linear-gradient(bottom, #669900, #669900);
+            background: linear-gradient(to bottom, #669900, #669900);
+            color: #fff;
+        }
+
+        .supporting .p {
+            margin: 20px 0;
+        }
+
+        .supporting .p p {
+            line-height: 2em;
+            text-indent: 2em;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="app">
+        <header id="header" class="navbar brand-color navbar-inverse fixed-header-layout" role="navigation">
+            <div class="container">
+                <div class="col-xs-12 col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                    <div class="navbar-header">
+                        <div class="col-md-2" style="width:12.5%;padding-left: 0px;">
+                            <a class="" href="">
+                                <img class="logo logo-visible v-middle" width="120" src="./resource/images/logo.png" alt="编程logo" title="编程logo">
+                            </a>
+                        </div>
+                        <!-- 头部菜单start -->
+                        <div class="col-md-7" id="h_n_min" style="width:67.5%;">
+                            <nav class="collapse navbar-collapse f-right" style="float:left;">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a class="color-w link1" href="index.html">home</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="products.html">products</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="treatment.html">treatment</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="bestselling.html">best selling</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="company.html ">company</a>
+                                    </li>
+                                    <li>
+                                        <a class="color-w" href="contact.html">contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- 头部菜单end -->
+
+
+                        <button courseTypeName="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="top: -52px;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="float_im" style="height:180px;">
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=412226853&amp;site=qq&amp;menu=yes">
+                    <div class="qq">
+                        <img src="./resource/images/qq.png" title="qq在线客服" alt="qq在线客服">
+                        <p>在线客服</p>
+                    </div>
+                </a>
+                <div class="code">
+                    <img src="./resource/images/code.jpg" title="设计空间公众号二维码" alt="设计空间微信公众号二维码">
+                    <img class="b" src="./resource/images/code.jpg" title="设计空间微信公众号二维码大图" alt="设计空间微信公众号二维码大图">
+                </div>
+        </div>
+
+
+        <div class="mp-container">
+            <section>
+                <div class="content">
+                    <div class="navigation">
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="content mb clearfix">
+                    <div class="shop-details-left">
+                        <div id="shop_detail" class="ban ban-img2 clearfix">
+                            <div id="ban_pic1" class="ban2 ban-img">
+                                <ul style="width: 940px; height: 760px; left: 0px;">
+                                    <li style="float: left;" v-for="item in jbxx.imgurlAry">
+                                        <a href="javascript:;">
+                                            <img :src="item" width="620" height="380" alt="">
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="min_pic">
+                                <div id="ban_dt_num" class="num num01 clearfix">
+                                    <ul style="width: 100px; height: 100px;">
+                                        <li :class="index==0? 'on' :''" v-for="(item,index) in jbxx.imgurlAry">
+                                            <a href="javascript:;">
+                                                <img :src="item" width="110" height="100" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-details-right">
+                        <div class="shop-details-title">
+                            <input id="isfinish" value="0" type="hidden">
+                            <p v-if="jbxx.mqzt == 2" class="backgr" style="display: block;"></p>
+                            <h2> {{jbxx.bt}}</h2>
+                            <p id="bottom-line">更新时间：
+                                <span>{{jbxx.tjsj}}</span>
+                        </div>
+                        <div class="thirdShop">
+                            <span v-if="jbxx.lb==2">类型：转让</span>
+                            <span v-if="jbxx.lb==3">类型：出租</span>
+                            <span v-if="jbxx.lb==4">类型：招商</span>
+                        </div>
+                        <div class="thirdShop">
+                            <span>区域：{{jbxx.areaName}}</span>
+                        </div>
+                        <div class="thirdShop">
+                            <span>面积：{{jbxx.mj}}㎡</span>
+                        </div>
+                        <div class="thirdShop">
+                            <span>业态：{{jbxx.ytmc}}</span>
+                        </div>
+
+                        <p>租金：
+                            <a>{{jbxx.price}}元/月</a>
+                        </p>
+                        <p>联系电话：
+                            <a>{{jbxx.lxdh}} </a>
+                        </p>
+                        <p>联系人：
+                            <a>{{jbxx.lxr}}</a>
+                        </p>
+                        <p>商铺地址：{{jbxx.spdz}}</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="content">
+                    <div class="supporting">
+                        <div class="tabs">
+                            <a href="javascript:;" class="selected-first">PRINCIPLE</a>
+                        </div>
+                        <div class="p">
+                            <p v-html="jbxx.principle"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+        <footer id="footer" class="footer b-top">
+            <div class="copyright">
+                <span class="color-light">Copyright © 2018&nbsp;
+                    <a href="">长沙融聚文化有限公司</a>&nbsp;版权所有 湘ICP备XXX号.</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+
+        $(function () {
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    restUrl: 'http://www.alaoji.com:8080/lgFace',
+                    jbxx: {
+                        bt: '',
+                        tjsj: '',
+                        ytmc: '',
+                        lxdh: '',
+                        areaName: '',
+                        mj: '',
+                        imgurls: '',
+                        imgurlAry: [],
+                        imgurl: '',
+                        lb: '',
+                        price: '',
+                        spdz: '',
+                        lxr: '',
+                        mmjs: '',
+                        principle: "<p>1. 40K Cavitation body slimming Strong sound wave explosion fat head with collective strong sound wave head, strong sound wave of 40,000 HZ may be emitted to human body for impacting fat cells fiercely and causing friction motion between fat cells. This may cause effective consumption of calories and moisture in fat cells and reduce the size of fat cells. What's more, sound wave vibration may cause fierce impact of fat cells to make them be exploded instantaneously, reduce the amount of fat cells and thereby achieve the effects of removing fat.</p><p>2.Vacuum pressure+bipolar RF body shape For body and face re-shaping. Weight loss Vacuum +RF fat-explosion machine can promote tissue metabolism,repel the cellulite, which make fat granule in different depths and shocking make fusion energy, and the deepest receptor can get granule in 3 cm thick of skin, and rapid expansion and the rapid heating of the cell wall that exceed the elastic limits and arises cells broken, so that the combustion of fatty acids at the same time broken out of a pot, not only the burning consumption of fatty acids but also more directly emptying so rapidly reduce the size of granule</p><p>3.Bipolar Tripolar RF Facial wrinkle elimination, tightening and lifting Facial RF head capacitive coupling electrode is used for transmitting radio-wave energy and generating an electric field for entering into subcutaneous tissue through the skin surface. In the high-frequency of 450khz, this electric field changes its polarity for 450,000 times per second. To reply to the rapid change in electrode, directions of electrical particles the skin are also changed. By this time, natural electric resistance in the subcutaneous tissue moves and generates heat energy. As dermis collagen may immediately shrink when the temperature is within the range from 60 to 70 celsius degree, after wrinkle operation, client may immediately sense the skin tightening effects as it is being lifted and firmed. When collagen is produced continuously, thickness and density of the skin papillary dermis may be increased to remove wrinkles, eliminate scars, restore skin elasticity and gloss and make it be blonde and smooth. While collagen is increased, fresh skin is generated in the position of operation and wrinkles are removed by large amount of cells. In addition, when cortex without elasticity or that with thick horny layer in the area with wrinkles is separated, surrounding skin will also be renewed.</p> <p>5 Sextupole RF body contour It takes the most advanced sextupole RF technique and energy, directly penetrate into deep-seated cellulite. With targeted oriented RF output, it makes the fatty cells in quick active state, produces heat friction, higher the partial temperature. Through the sweat gland, liver sausage circulation and lymph, exhaust the redundant fatness and toxins out of the body, so get the effect of cellulite dissolving.</p><p>6 Red light (wavelength 640nm-5nm ) Smooth skin operation High purity red light could penetrate skin deep level,to increase microcirculation by actinochemistry,to stimulate metabolism, to stimulate rejuvenation, Red light irradiation could increase effectively on collagen cytoactive,speeding up on exporting waste products, or dead cell from the tissue, stimulating secretion of fibroblast growth factor,so that the red light could repair impaired skin, improve fine wrinkle,recover skin flexibility,improve dark complexion, make skin soft,moist ,smooth Furthermore, the red light could diminish inflammation, has good effect to cell pathological changes, the operationway is easy ,soft,comfortable and effective</p>",
+                        mqzt: '',
+                        jd: '',
+                        wd: ''
+                    }
+                },
+                methods: {
+                    getData: function (callback) {
+                        var me = this;
+                        $.ajax({
+                            type: "get",
+                            url: me.restUrl + "/comn/getTeacher",//获取列表数据
+                            dataType: "jsonp",
+                            async: false,
+                            data: {},
+                            success: function (data) {
+                                // me.items = data.teachers;
+                            }
+                        });
+                    },
+                    openWin: function (url, text, winInfo) {
+                        var winObj = window.open(url, text, winInfo);
+                        var loop = setInterval(function () {
+                            if (winObj.closed) {
+                                clearInterval(loop);
+                                //alert('closed');      
+                                parent.location.reload();
+                            }
+                        }, 1);
+                    },
+                    quit: function () {
+                        localStorage.clear();
+                        location.reload();
+                    },
+                    initQQ:function(){
+                        var code = document.getElementsByClassName('code');
+                        if (code && code.length > 0) {
+                            for (var a = 0; a < code.length; a++) {
+                                code[a].onmouseover = function () {
+                                    var b = this.getElementsByClassName('b');
+                                    b[0].style.display = "block ";
+                                }
+                                code[a].onmouseout = function () {
+                                    var b = this.getElementsByClassName('b');
+                                    b[0].style.display = "none ";
+                                }
+                            }
+                        }
+                    }
+                },
+                mounted: function () {
+                    this.initQQ();
+
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
