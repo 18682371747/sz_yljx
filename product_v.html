@@ -155,77 +155,23 @@
                                         <a class="color-w link1" href="index.html">home</a>
                                     </li>
                                     <li class="active">
-                                        <a class="color-w" href="products.html">products</a>
+                                        <a class="color-w" href="products.html?titleType=products">products</a>
                                         <ul class="animenu__nav__child">
-                                            <li>
-                                                <a href="">cavitation rf</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Microdermabrasion</a>
-                                            </li>
-                                            <li>
-                                                <a href="">tattoo removal</a>
-                                            </li>
-                                            <li>
-                                                <a href="">hair removal</a>
-                                            </li>
-                                            <li>
-                                                <a href="">lipo laser</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Crystal Fractional RF</a>
-                                            </li>
-                                            <li>
-                                                <a href="">slimming blanket</a>
-                                            </li>
-                                            <li>
-                                                <a href="">led light</a>
-                                            </li>
-                                            <li>
-                                                <a href="">small device</a>
+                                            <li v-for="item in product_items">
+                                                <a :href="'products.html?titleType=products&menuType='+item.id" v-text="item.dmnr"></a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a class="color-w" href="treatment.html">treatment</a>
                                         <ul class="animenu__nav__child">
-                                            <li>
-                                                <a href="">Breast Enhancer</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Weight Loss</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Skin Rejuvenation</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Hair Removal</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Massage</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Detox</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Acne Remover</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Lightening</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Health care</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Testing</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Other</a>
+                                            <li v-for="item in treatment_items">
+                                                <a :href="'treatment.html?titleType=treaments&menuType='+item.id" v-text="item.dmnr"></a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a class="color-w" href="bestselling.html">best selling</a>
+                                        <a class="color-w" href="bestselling.html?titleType=bestselling">best selling</a>
                                     </li>
                                     <li>
                                         <a class="color-w" href="company.html ">company</a>
@@ -256,8 +202,8 @@
                     </div>
                 </a>
                 <div class="code">
-                    <img src="./resource/images/code.jpg" title="设计空间公众号二维码" alt="设计空间微信公众号二维码">
-                    <img class="b" src="./resource/images/code.jpg" title="设计空间微信公众号二维码大图" alt="设计空间微信公众号二维码大图">
+                    <img src="./resource/images/code.jpg" title="公众号二维码" alt="微信公众号二维码">
+                    <img class="b" src="./resource/images/code.jpg" title="微信公众号二维码大图" alt="微信公众号二维码大图">
                 </div>
         </div>
 
@@ -365,7 +311,9 @@
             var app = new Vue({
                 el: '#app',
                 data: {
-                    restUrl: 'http://www.alaoji.com:8080/lgFace',
+                    restUrl: 'http://183.215.12.97:8884/slowbuy',
+                    product_items: [],
+                    treatment_items: [],
                     jbxx: {
                         bt: '',
                         tjsj: '',
@@ -388,6 +336,34 @@
                     }
                 },
                 methods: {
+                    getProduct: function () {
+                        var me = this;
+                        $.ajax({
+                            type: "get",
+                            url: me.restUrl + "/sz_szyl/getProduct",//获取列表数据
+                            dataType: "jsonp",
+                            async: false,
+                            data: {},
+                            success: function (data) {
+                                me.product_items = data.commonInfo;
+                            }
+                        });
+
+                    },
+                    getTreatment: function () {
+                        var me = this;
+                        $.ajax({
+                            type: "get",
+                            url: me.restUrl + "/sz_szyl/getTreatment",//获取列表数据
+                            dataType: "jsonp",
+                            async: false,
+                            data: {},
+                            success: function (data) {
+                                me.treatment_items = data.commonInfo;
+                            }
+                        });
+
+                    },
                     getData: function (callback) {
                         var me = this;
                         $.ajax({
@@ -432,6 +408,8 @@
                     }
                 },
                 mounted: function () {
+                    this.getProduct();
+                    this.getTreatment();
                     this.initQQ();
 
                 }

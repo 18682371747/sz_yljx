@@ -721,12 +721,19 @@ input[type='submit'] {
     font-size: 12px;
     color: #505763;
     padding-top: 5px;
+    padding-bottom: 15px;
 }
 .pt-features li strong{
-    height: 60px;
-    min-height: 60px;
+    height: 20px;
     font-size: 13px;
     display: block;
+}
+.pt-features li:first-child strong {
+    height: 60px;
+    min-height: 60px;
+    font-weight: initial;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 .price-table-container .pt-title,
 .price-table-container .pt-cta-btn {
